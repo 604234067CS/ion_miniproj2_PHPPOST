@@ -16,7 +16,7 @@
 <ion-content padding>
     <ion-item>
         <ion-label>เลือกห้องเช่า</ion-label>
-        <ion-select >
+        <ion-select [(ngModel)]="result.room1">
             <ion-option *ngFor="let get of value" value={{get.name_ren}}>{{get.name_ren}}</ion-option>
         </ion-select>
       </ion-item>
@@ -25,11 +25,31 @@
       <ion-item>
 
           <ion-label>เลือกห้องเช่า</ion-label>
-          <ion-select >
+          <ion-select [(ngModel)]="result.room2">
             <ion-option *ngFor ="let get of value"  value={{get.name_ren}}>{{get.name_ren}}</ion-option>
           </ion-select>
         </ion-item>
+     <button ion-button block (click)="getRoomToRoom()">เปรียบเทียบ</button>
 
-      <button ion-button  (click)="getRoomToRoom()">ส่ง</button>
+       <ion-card >
+         <ion-card-content *ngFor="let show of showroom1" >
+           <p><b>ชื่อห้องเช่า :</b>{{show.room_name}}</p>
+           <p><b>ราคา THB :</b>{{show.room_price}}</p>
+           <p><b>ที่อยู่ :</b>{{show.rooms_address}}</p>
+           <p><b>ประเภทห้องเช่า :</b>{{show.category_name}}</p>
+           <p><b>จำกัดเพศผู้เช่า : </b>{{show.room_category}}</p>
+           <p><b>เบอร์โทรติดต่อ :</b>{{show.room_tell}}</p>
+         </ion-card-content>
+       </ion-card>
 
+       <ion-card>
+          <ion-card-content *ngFor="let show of showroom2" >
+              <p><b>ชื่อห้องเช่า :</b>{{show.room_name}}</p>
+              <p><b>ราคา THB :</b>{{show.room_price}}</p>
+              <p><b>ที่อยู่ :</b>{{show.rooms_address}}</p>
+              <p><b>ประเภทห้องเช่า :</b>{{show.category_name}}</p>
+              <p><b>จำกัดเพศผู้เช่า : </b>{{show.room_category}}</p>
+              <p><b>เบอร์โทรติดต่อ :</b>{{show.room_tell}}</p>
+            </ion-card-content>
+        </ion-card>
 </ion-content>

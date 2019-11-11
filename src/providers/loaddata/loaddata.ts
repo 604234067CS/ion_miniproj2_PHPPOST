@@ -11,6 +11,11 @@ import { Http } from '@angular/http';
 */
 @Injectable()
 export class LoaddataProvider {
+  searchroom: any;
+  searchnamroom: any;
+  searchroomname(val: any){
+    throw new Error("Method not implemented.");
+  }
 
   constructor(public http: HttpClient) {
     console.log('Hello LoaddataProvider Provider');
@@ -53,5 +58,10 @@ loadprice_2(){
 loadprice_3(){
   let url ='http://localhost/todoslim3/public/room/price30';
   return this.http.get(url);
+}
+showroom(name_ren){
+let url = 'http://localhost/todoslim3/public/room/'+name_ren;
+return this.http.get(url);
+
 }
 }//
