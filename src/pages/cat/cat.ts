@@ -21,5 +21,17 @@ export class CatPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad CatPage');
   }
+  Condominium(){
+    this.navCtrl.push("CondomiuiumPage");
+  }
+  Apartamen(){
+    this.navCtrl.push("ApartamenPage");
+  }
+  Mansion(){
+    this.navCtrl.push("MansionPage");
+  }
+  Dorm(){
+    this.navCtrl.push("DormPage");
+  }
 
 }

@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color ="yellow">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -17,16 +17,16 @@
 <ion-content padding>
     <ion-item>
         <ion-label floating>ชื่อผู้ใช้</ion-label>
-        <ion-input type="" [(ngModel)]="username"></ion-input>
+        <ion-input type="text" [(ngModel)]="logindata.username"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label floating>รหัสผ่าน</ion-label>
-        <ion-input type="password" [(ngModel)]="password"></ion-input>
+        <ion-input type="password" [(ngModel)]="logindata.password"></ion-input>
       </ion-item>
-        <button id="login-button1" ion-button color="balanced" block style="border-radius:50px 50px 50px 50px;" on-click="signIn(username,password)">
+        <button id="login-button1"  ion-button color="yellow" block style="border-radius:50px 50px 50px 50px;" on-click="signIn(username,password)">
             เข้าสู่ระบบ
           </button>
-          <button id="login-button3" ion-button color="positive" block style="border-radius:50px 50px 50px 50px;" on-click="goToSignup()">
+          <button id="login-button3"  ion-button color="yellow" block style="border-radius:50px 50px 50px 50px;" on-click="goToSignup()">
               สร้างบัญชีผู้ใช้
             </button>
 

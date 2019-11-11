@@ -5,10 +5,10 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
-    <ion-title>สร้างบัญชีผู้ใช้</ion-title>
-  </ion-navbar>
-</ion-header>
+    <ion-navbar color ="yellow">
+      <ion-title>สร้างบัญชีผู้ใช้</ion-title>
+    </ion-navbar>
+  </ion-header>
 
 <ion-content padding>
     <ion-item id="signup-input1">
@@ -35,5 +35,14 @@
               </ion-label>
               <ion-input type="password"  name = "password" [(ngModel)]="password"></ion-input>
             </ion-item>
+            <button id="login-button1" ion-button color="yellow" block style="border-radius:50px 50px 50px 50px;" on-click="signIn()">
+              ลงทะเบียน
+            </button>
+            <button id="login-button3" ion-button color="yellow" block style="border-radius:50px 50px 50px 50px;" on-click="goTologin()">
+                เข้าสู่ระบบ
+              </button>
+              <button id="login-button3" ion-button color="yellow" block style="border-radius:50px 50px 50px 50px;" on-click="goTologin()">
+                ยกเลิก
+              </button>
 
 </ion-content>

@@ -1,9 +1,9 @@
-import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+
 /**
- * Generated class for the SignupPage page.
+ * Generated class for the RDetailPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,21 +11,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-signup',
-  templateUrl: 'signup.html',
+  selector: 'page-r-detail',
+  templateUrl: 'r-detail.html',
 })
-export class SignupPage {
-
+export class RDetailPage {
+  rentedroom: any=[];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SignupPage');
+    console.log('ionViewDidLoad RDetailPage');
+    this.rentedroom = this.navParams.data;
+    console.log(this.rentedroom);
   }
 
-  goTologin(params){
-    if (!params) params = {};
-    this.navCtrl.push(LoginPage);
-  }
-  
-}//end
+}//

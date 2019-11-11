@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color ="yellow">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -14,5 +14,22 @@
 </ion-header>
 
 <ion-content padding>
+    <ion-item>
+        <ion-label>เลือกห้องเช่า</ion-label>
+        <ion-select >
+            <ion-option *ngFor="let get of value" value={{get.name_ren}}>{{get.name_ren}}</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-note>กับ</ion-note>
+      <ion-item>
+
+          <ion-label>เลือกห้องเช่า</ion-label>
+          <ion-select >
+            <ion-option *ngFor ="let get of value"  value={{get.name_ren}}>{{get.name_ren}}</ion-option>
+          </ion-select>
+        </ion-item>
+
+      <button ion-button  (click)="getRoomToRoom()">ส่ง</button>
 
 </ion-content>

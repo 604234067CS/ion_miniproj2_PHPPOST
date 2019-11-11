@@ -24,6 +24,7 @@ export class MyApp {
       { title: 'ประเภทห้องเช่า', component: CatPage, icon: 'category' },
       { title: 'เปรียบเทียบราคาห้องเช่า', component: ComPage, icon: 'compare' },
       { title: 'ลงชื่อผู้ใช้', component: LoginPage, icon: 'key' },
+     
     ];
 
   }
