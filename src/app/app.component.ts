@@ -20,11 +20,11 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage, icon: 'home' },
-      { title: 'ประเภทห้องเช่า', component: CatPage, icon: 'category' },
-      { title: 'เปรียบเทียบราคาห้องเช่า', component: ComPage, icon: 'compare' },
-      { title: 'ลงชื่อผู้ใช้', component: LoginPage, icon: 'key' },
-     
+      { title: 'Home', component: HomePage, icon: '' },
+      { title: 'ประเภทห้องเช่า', component: CatPage, icon: '' },
+      { title: 'เปรียบเทียบราคาห้องเช่า', component: ComPage, icon: '' },
+      { title: 'ลงชื่อผู้ใช้', component: LoginPage, icon: '' },
+   
     ];
 
   }

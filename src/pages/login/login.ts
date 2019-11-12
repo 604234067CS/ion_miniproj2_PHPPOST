@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SignupPage } from '../signup/signup';
-import {  HttpClientModule } from '@angular/common/http';
-import{Http} from '@angular/http';
-import 'rxjs/add/operator/map';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map'
+import { HomePage } from '../home/home';
+
 
 /**
  * Generated class for the LoginPage page.
@@ -19,7 +19,7 @@ import 'rxjs/add/operator/map';
 })
 export class LoginPage {
 logindata: any= {};
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http:Http) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http:Http, public alertCrtl : AlertController ) {
   this.logindata.username="";
   this.logindata.password="";
   }
@@ -27,33 +27,41 @@ logindata: any= {};
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-  signIn(){
-    if(this.logindata.username !="" && this.logindata.password!=""){
+  login(){
+    if( this.logindata.username !="" && this.logindata.password !="" ){
+      console.log("user:",this.logindata.username);
+      console.log("pass:",this.logindata.password);
 
-    console.log("user:",this.logindata.username);
-    console.log("user:",this.logindata.password);
-
-      let url : string = "http://localhost/login/login.php";
-      let datapost = JSON.stringify({
+      let url:string = "http://localhost/login/login.php";
+      let dataPost = JSON.stringify({
         user:this.logindata.username,
         pass:this.logindata.password
-
       });
-      this.http.post(url,datapost)
+      this.http.post(url,dataPost)
       .map(res=>res.json())
-      .subscribe(data =>{
-
-        console.log(data);
-
+      .subscribe(data=>{
+          if(data!=null){
+            this.navCtrl.setRoot(HomePage);
+          }else{
+            console.log("เข้าสู่ระบบผิดพลาด")
+            this.alertPopup("แจ้งเตือน","sername or password ผิดพลาด")
+          }
       });
-
     }else{
-      console.log("กรุณาป้อนรหัส")
+      console.log("Enter Password");
     }
+  }
 
-  }
-  goToSignup(params){
-    if (!params) params = {};
-    this.navCtrl.push(SignupPage);
-  }
+alertPopup(title:string,Msg:string){
+    let alert = this.alertCrtl.create({
+        title : title,
+        subTitle : Msg,
+        buttons : ['OK']  
+    }); 
+    alert.present();
+}
+
+gosignin(){
+  this.navCtrl.push("SignupPage");
+}
 }//en

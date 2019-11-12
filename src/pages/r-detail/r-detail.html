@@ -5,14 +5,17 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-    <ion-navbar color ="yellow">
+    <ion-navbar color="NAVY">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
       <ion-title>รายละเอียดห้อง</ion-title>
     </ion-navbar>
   </ion-header>
 
 <ion-content padding>
   <ion-thumbnail item-left>
-    <img src="assets/imgs/{{rentedroom.id_pic}}.jpg">
+    <img src="http://localhost/slim/img/{{rentedroom.id_pic}}.jpg">
   </ion-thumbnail>
   <ion-card-content>
     <p>ชื่อห้องพัก: {{rentedroom.name_ren}}</p>

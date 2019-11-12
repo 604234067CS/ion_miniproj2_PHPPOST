@@ -9,7 +9,6 @@ import { HomePage } from '../pages/home/home';
 import { CatPage } from '../pages/cat/cat';
 import { ComPage } from '../pages/com/com';
 import { LoginPage } from '../pages/login/login';
-import { SignupPage } from '../pages/signup/signup';
 //import { CondomiuiumPage } from '../pages/condomiuium/condomiuium';
 //import { ApartamenPage } from '../pages/apartamen/apartamen';
 //import { MansionPage } from '../pages/mansion/mansion';
@@ -22,7 +21,7 @@ import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,CatPage,ComPage,LoginPage,SignupPage,RDetailPage,
+    HomePage,CatPage,ComPage,LoginPage,RDetailPage,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +30,7 @@ import { HttpModule } from '@angular/http';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,CatPage,ComPage,LoginPage,SignupPage,RDetailPage,
+    HomePage,CatPage,ComPage,LoginPage,RDetailPage,
   ],
   providers: [
     StatusBar,

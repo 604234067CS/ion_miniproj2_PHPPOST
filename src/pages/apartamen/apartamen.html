@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar color ="yellow">
+  <ion-navbar color ="NAVY">
     <ion-title>Apartamen</ion-title>
   </ion-navbar>
 </ion-header>
@@ -14,7 +14,7 @@
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
     <ion-item *ngFor="let room of rentedroom"(click)="getdetail(room)">
         <ion-thumbnail item-left>
-            <img src="assets/imgs/{{room.id_pic}}.jpg">
+            <img src="http://localhost/slim/img/{{room.id_pic}}.jpg">
         </ion-thumbnail>
         <h2><b>{{room.name_ren}}</b></h2>
         <p>{{room.address_ren}}</p>
@@ -22,5 +22,6 @@
         <h2 ion-text color="primary">ราคา {{room.price}} บาท</h2>
         
       </ion-item>
+        
 
 </ion-content>

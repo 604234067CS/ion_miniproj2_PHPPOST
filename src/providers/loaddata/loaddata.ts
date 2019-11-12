@@ -22,45 +22,45 @@ export class LoaddataProvider {
   }
 
 getcondomiuium(){
-  const url = 'http://localhost/todoslim3/public/condomiuium';
+  const url = 'http://localhost/slim/public/condomiuium';
   return this.http.get(url);
 }
 getapartamen(){
-  const url = 'http://localhost/todoslim3/public/apartamen';
+  const url = 'http://localhost/slim/public/apartamen';
   return this.http.get(url);
 }
 getmansion(){
-  const url = 'http://localhost/todoslim3/public/mansion';
+  const url = 'http://localhost/slim/public/mansion';
   return this.http.get(url);
 }
 getdorm(){
-  const url = 'http://localhost/todoslim3/public/dorm';
+  const url = 'http://localhost/slim/public/dorm';
   return this.http.get(url);
 }
 searchrooms(query){
-  let url = 'http://localhost/todoslim3/public/search/'+query;
+  let url = 'http://localhost/slim/public/search/'+query;
   return this.http.get(url);
 }
 loadrooms(){
-  let url = 'http://localhost/todoslim3/public/roomlist';
+  let url = 'http://localhost/slim/public/roomlist';
   return this.http.get(url);
 }
 loadprice_1(){
-  let url ='http://localhost/todoslim3/public/room/price20';
+  let url ='http://localhost/slim/public/room/price20';
   return this.http.get(url);
 }
 //2500
 loadprice_2(){
-  let url ='http://localhost/todoslim3/public/room/price25';
+  let url ='http://localhost/slim/public/room/price25';
   return this.http.get(url);
 }
 //3000
 loadprice_3(){
-  let url ='http://localhost/todoslim3/public/room/price30';
+  let url ='http://localhost/slim/public/room/price30';
   return this.http.get(url);
 }
 showroom(name_ren){
-let url = 'http://localhost/todoslim3/public/room/'+name_ren;
+let url = 'http://localhost/slim/public/room/'+name_ren;
 return this.http.get(url);
 
 }

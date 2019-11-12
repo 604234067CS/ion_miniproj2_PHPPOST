@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 import{Http} from '@angular/http';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the SignupPage page.
@@ -24,9 +25,7 @@ export class SignupPage {
     this.regisResult.surname ="";
     this.regisResult.username =""; 
     this.regisResult.password =""; 
-    this.regisResult.em ="";
-
-
+    this.regisResult.email ="";
   }
 
   ionViewDidLoad() {
@@ -38,18 +37,17 @@ export class SignupPage {
     this.navCtrl.push(LoginPage);
   }
   signIn(){
-    if(this.regisResult.name !="" && this.regisResult.surname !="" &&this.regisResult.password!="" &&this.regisResult.em!="" && this.regisResult.username!=""){
+    if(this.regisResult.name !="" && this.regisResult.surname !="" &&this.regisResult.password!="" &&this.regisResult.email!="" && this.regisResult.username!=""){
       console.log("user",this.regisResult.name);
-     console.log("surname",this.regisResult.surname);
-     console.log("pass",this.regisResult.em);
-     console.log("username",this.regisResult.username); 
-     console.log("email",this.regisResult.password);
- 
-     let url= 'http://localhost/login/singup.php';
+      console.log("surname",this.regisResult.surname);
+      console.log("pass",this.regisResult.email);
+      console.log("username",this.regisResult.username); 
+      console.log("email",this.regisResult.password);
+     let url= 'http://localhost/login/signup.php';
         let datapost = JSON.stringify({
          name:this.regisResult.name,
          sname:this.regisResult.surname,
-         email:this.regisResult.em,
+         email:this.regisResult.email,
          username:this.regisResult.username,
          password:this.regisResult.password
        });
@@ -90,8 +88,5 @@ export class SignupPage {
       alert.present();
      }
  }
-
-
-  
-  
+ 
 }//end
